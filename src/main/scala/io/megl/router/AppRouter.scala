@@ -88,7 +88,7 @@ object AppRouter {
     .build
 
 
-  val baseUrl = BaseUrl.fromWindowOrigin / "scalajs-react-template"
+  val baseUrl = BaseUrl.fromWindowOrigin / "admin"
   val C = AppPage.router(baseUrl)
 
 }
