@@ -19,3 +19,7 @@ project/plugins/project/
 
 # Node.JS
 node_modules/
+
+
+# skipping resources
+app/vendors/
