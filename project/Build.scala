@@ -11,7 +11,7 @@ object ScalajsReact extends Build {
 
   val scalaJsOutputDir = Def.settingKey[File]("directory for javascript files output by scalajs")
 
-  val Scala211 = "2.11.5"
+  val Scala211 = "2.11.6"
 
   type PE = Project => Project
 
@@ -102,9 +102,9 @@ object ScalajsReact extends Build {
     .settings(
       name := "core",
       libraryDependencies ++= Seq(
-"com.github.japgolly.scalajs-react" %%% "core" % "0.7.2-RC1",
-"com.github.japgolly.scalajs-react" %%% "extra" % "0.7.2-RC1",
-"com.lihaoyi" %%% "upickle" % "0.2.6-RC1"),
+"com.github.japgolly.scalajs-react" %%% "core" % "0.8.1",
+"com.github.japgolly.scalajs-react" %%% "extra" % "0.8.1",
+"com.lihaoyi" %%% "upickle" % "0.2.8"),
       persistLauncher := true
     )
     .settings(
@@ -125,7 +125,7 @@ object ScalajsReact extends Build {
 
     val shared = Def.setting(Seq(
       "org.scala-lang.modules" %% "scala-async" % "0.9.2",
-      "com.lihaoyi" %%% "upickle" % "0.2.6-RC1"
+      "com.lihaoyi" %%% "upickle" % "0.2.8"
     ))
 
     val scalaJvm = Def.setting(shared.value ++ Seq(
@@ -133,8 +133,8 @@ object ScalajsReact extends Build {
     ))
 
     val scalaJs = Def.setting(shared.value ++ Seq(
-      "org.scala-js" %%% "scalajs-dom" % "0.7.0",
-      "com.github.japgolly.scalajs-react" %%% "core" % "0.7.2-RC1"
+      "org.scala-js" %%% "scalajs-dom" % "0.8.0",
+      "com.github.japgolly.scalajs-react" %%% "core" % "0.8.1"
     ))
   }
 
